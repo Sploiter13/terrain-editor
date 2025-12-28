@@ -98,7 +98,7 @@ local function startRainbowTerrain()
 	if isRainbowActive then return end
 	
 	isRainbowActive = true
-	rainbowConnection = runService.PostLocal:Connect(function()
+	rainbowConnection = runService.Render:Connect(function()
 		local time = tick()
 		local baseHue = (time * rainbowSpeed) % 360
 		
